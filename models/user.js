@@ -5,6 +5,7 @@ const { Schema, model, Types } = mongoose;
 
 const userSchema = new Schema(
     {
+
         username: {
             type: String,
             unique: true,
@@ -42,7 +43,7 @@ const userSchema = new Schema(
         toJSON: {
             virtuals: true,
         },
-        _id: false,
+
     }
 );
 

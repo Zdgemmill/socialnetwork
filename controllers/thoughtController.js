@@ -8,6 +8,7 @@ const ThoughtController = {
             const thought = await Thought.create(req.body);
             res.status(201).json(thought);
         } catch (error) {
+            console.error("Error creating thought:", error);
             res.status(400).json({ message: "Failed to create thought", error });
         }
     },

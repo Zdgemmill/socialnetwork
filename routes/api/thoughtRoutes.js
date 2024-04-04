@@ -14,8 +14,8 @@ router
     .put(thoughtController.updateThoughtById)
     .delete(thoughtController.deleteThought);
 
-router.post("/:thoughtId/reactions", thoughtController.createReaction);
-router.delete("/:thoughtId/reactions/:reactionId", thoughtController.deleteReaction);
+router.post("/:thoughtId/reactions", thoughtController.addReaction); // corrected route handler name
+router.delete("/:thoughtId/reactions/:reactionId", thoughtController.removeReaction); // corrected route handler name
 
 // Export the router
 module.exports = router;

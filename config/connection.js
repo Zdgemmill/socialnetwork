@@ -1,7 +1,7 @@
-const { connect, connection } = require("mongoose");
+const { connect, connection } = require('mongoose');
 
-//mongodb connection
-connect("mongodb://127.0.0.1:27017/NetworkDB");
+const connectionString = 'mongodb://127.0.0.1:27017/NetworkDB';
 
-// Export connection
+connect(connectionString);
+
 module.exports = connection;
