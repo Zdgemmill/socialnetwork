@@ -36,7 +36,7 @@ const UserController = {
     // Update a user by ID
     async updateUserById(req, res) {
         try {
-            const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
+            const user = await User.findOneAndUpdate(req.params.id, req.body, { new: true });
             if (!user) {
                 return res.status(404).json({ message: "User not found" });
             }
