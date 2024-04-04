@@ -1,5 +1,5 @@
 const express = require("express");
-const userController = require("../../controllers/thought");
+const userController = require("../../controllers/userController");
 
 // Create a new router instance
 const router = express.Router();
